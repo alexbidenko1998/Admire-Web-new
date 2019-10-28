@@ -1,0 +1,25 @@
+<header>
+  <mat-toolbar color="primary" class="position-fixed" style="z-index: 10;">
+    <div class="container">
+      <a mat-button routerLink="/map" class="text-white">
+        <mat-icon>map</mat-icon>
+        Карта
+      </a>
+    </div>
+  </mat-toolbar>
+
+  <div class="main-header-container">
+    <div class="main-header"></div>
+
+    <h1 class="text-center main-title m-0 display-2 hide-header-elements">Admire</h1>
+    <h2 class="text-center main-title m-0 display-4 hide-header-elements fade show" id="ad-welcome-text">
+      Активная жизнь начинается здесь!
+    </h2>
+
+    <div class="w-100 text-center" style="padding-top: 100px;">
+      <div class="d-inline-block mx-auto" style="transform: scaleX(2)">
+        <div id="header-arrow" class="hide-header-elements" (click)="scrollDawn()"></div>
+      </div>
+    </div>
+  </div>
+</header>

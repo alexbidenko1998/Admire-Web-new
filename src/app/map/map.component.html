@@ -1,0 +1,22 @@
+<header>
+  <div class="position-absolute d-inline-flex" style="top: 0; left: 0; z-index: 50;">
+    <nav class="z-depth-2 d-inline-block" style="border-bottom-right-radius: 16px; background: #666; overflow: hidden;">
+      <a mat-button routerLink="/" class="text-white">
+        <mat-icon>arrow_back</mat-icon><span class="d-none d-lg-inline">Главная</span>
+      </a>
+      <a mat-button class="text-white">
+        <span class="d-none d-lg-inline">Найти место</span><mat-icon>search</mat-icon>
+      </a>
+    </nav>
+
+    <section class="pl-2">
+      <a href="/" mat-mini-fab>
+        <mat-icon>menu</mat-icon>
+      </a>
+    </section>
+  </div>
+</header>
+
+<main>
+  <div #map style="width: 100vw; height: 100vh;"></div>
+</main>

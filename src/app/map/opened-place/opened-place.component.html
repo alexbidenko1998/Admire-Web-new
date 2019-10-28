@@ -1,0 +1,50 @@
+<div class="container text-white pt-2">
+  <div class="row m-0">
+    <h4 class="col p-0 m-0" style="flex-basis: 0;">{{place.title}}</h4>
+    <a mat-mini-fab class="col-auto" color="primary" (click)="close()">
+      <i class="material-icons text-white">close</i>
+    </a>
+  </div>
+  <hr class="white" />
+  <div class="row m-0">
+    <div class="w-100 mb-4">
+      <div class="d-inline-block" style="max-width: 168px; cursor: pointer;">
+        <div style="font-size: 34px; line-height: 34px; height: 34px; color: white; letter-spacing: 2px; max-width: 168px;">★★★★★</div>
+        <div style="font-size: 36px; line-height: 36px; height: 34px; margin-top: -34px; color: #666; max-width: 168px;">★★★★★</div>
+        <div style="font-size: 34px; line-height: 34px; height: 34px; margin-top: -34px; letter-spacing: 2px; color: #ff0;
+                        overflow: hidden;" [style.width.px]="place.rating / 1000000 * 154">★★★★★</div>
+      </div>
+      <small class="d-inline-block">из {{place.count_rating.length}}</small>
+      <a class="waves-effect waves-light modal-close right col-auto p-0"
+         style="height: 44px; width: 44px; text-align: center; border-radius: 50%;">
+        <i class="material-icons text-white" style="height: 44px; line-height: 44px;">swap_calls</i>
+      </a>
+      <!--a href="" class="waves-effect waves-light modal-close right col-auto p-0 modal-trigger"
+         style="height: 44px; width: 44px; text-align: center; border-radius: 50%;">
+        <i class="material-icons text-white" style="height: 44px; line-height: 44px;">chat</i>
+      </a-->
+      <a class="waves-effect waves-light right col-auto p-0"
+         style="height: 44px; width: 44px; text-align: center; border-radius: 50%;">
+        <i class="material-icons text-white" style="height: 44px; line-height: 44px;">share</i>
+      </a>
+    </div>
+    <mat-chip-list>
+      <mat-chip *ngFor="let tag of place.tags" color="accent">{{tag}}</mat-chip>
+    </mat-chip-list>
+  </div>
+  <hr class="white" />
+  <p style="white-space: pre-wrap;">{{place.description}}</p>
+  <div class="container-fluid p-0">
+    <div class="row">
+      <div *ngFor="let image of place.images" class="col-lg-3 col-md-4 col-sm-6 col-12 p-1">
+        <a data-fancybox="gallery" [href]="image" style="height: 200px; width: 100%;">
+          <div class="gallery-image" [style.backgroundImage]="'url(' + image + ')'"></div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <hr class="white" />
+  <div class="row m-0">
+    <a mat-button class="ml-auto" (click)="close()">Закрыть</a>
+  </div>
+</div>
